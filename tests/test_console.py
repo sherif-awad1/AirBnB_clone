@@ -41,7 +41,7 @@ class TestHBNBCommand_help(unittest.TestCase):
         """
         This TEST tests the help for the quit command
         """
-        h = "TEST to handle quit command"
+        h = "Method to handle quit command"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help quit"))
             self.assertEqual(h, output.getvalue().strip())
@@ -50,7 +50,7 @@ class TestHBNBCommand_help(unittest.TestCase):
         """
         This TEST tests the help for the EOF command
         """
-        h = "TEST to handle EOF (End Of File)"
+        h = "Method to handle EOF (End Of File)"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("help EOF"))
             self.assertEqual(h, output.getvalue().strip())
