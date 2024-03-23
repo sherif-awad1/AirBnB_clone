@@ -152,7 +152,6 @@ class HBNBCommand(cmd.Cmd):
                 if key.split('.')[0] == commands[0]:
                     print(str(value))
 
-
     def do_count(self, arg):
         """
         Method to handle count command
@@ -261,6 +260,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("*** Unknown syntax: {}".format(arg))
             return False
+
 
 if __name__ == '__main__':
     """
