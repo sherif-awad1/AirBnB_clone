@@ -60,14 +60,14 @@ class BaseModel:
                 else:
                     setattr(self, key, value)
         if not kwargs:
-            storage.new(self)
+           models.storage.new(self)
 
     def save(self):
         """
         Updates the updated_at timestamp and saves the object to storage.
         """
         self.updated_at = datetime.utcnow()
-        storage.save()
+        models.storage.new(self)
 
     def to_dict(self):
         """
