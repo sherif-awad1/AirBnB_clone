@@ -10,7 +10,7 @@ application-specific models.
 
 import uuid
 from datetime import datetime
-from models import storage
+import models
 
 
 class BaseModel:
@@ -59,8 +59,8 @@ class BaseModel:
                     setattr(self, key, datetime.strptime(value, time_format))
                 else:
                     setattr(self, key, value)
-        if not kwargs:
-           models.storage.new(self)
+
+        models.storage.new(self)
 
     def save(self):
         """
