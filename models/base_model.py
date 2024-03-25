@@ -10,7 +10,7 @@ application-specific models.
 
 import uuid
 from datetime import datetime
-from models import storage
+from models
 
 
 class BaseModel:
